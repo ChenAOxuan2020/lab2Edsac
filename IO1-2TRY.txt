@@ -1,0 +1,96 @@
+[31]T127S
+[32]X0S
+[33]T0S
+[34]A[FirstElement]117S[GET1 ELEMENT]
+[35]T[TYPE NOW]115S[PUT INTO PLACE]
+[36]A[TYPE NOW]115S[Get Type Elemrnt]
+[37]S[SecondElement]118S[Now - Sec]
+[38]G[next]45S[If < 0 ]
+[39]S[1]123S[ Now - Sec -1]
+[40]E[next]45S[If >= 0]
+[41]T0S[clear]
+[42]A[1]123S[+1]
+[43]A[Time now]116S
+[44]T[Times Now]116S[times+1]
+[45]T0S[clear]
+[46]A[TYPE NOW]115S[Get Type Elemrnt]
+[47]S[ThirdElement]119S[Now -Third]
+[48]G[NEXT]55S[If < 0 ]
+[49]S[1]123S[ Now - Third -1]
+[50]E[next]55S[If >= 0]
+[51]T0S[clear]
+[52]A[1]123S[+1]
+[53]A[Time now]116S
+[54]T[Times Now]116S[times+1]
+[55]T0S[clear]
+[56]A[TYPE NOW]115S[Get Type Elemrnt]
+[57]S[FourthElement]120S[Now -Fourth]
+[58]G[next]65S[If < 0 ]
+[59]S[1]123S[ Now - Fourth -1]
+[60]E[next]65S[If >= 0]
+[61]T0S[clear]
+[62]A[1]123S[+1]
+[63]A[Time now]116S
+[64]T[Times Now]116S[times+1]
+[65]T0S[clear]
+[66]A[Type Now]115S[Get Type Elemrnt]
+[67]S[FifthElement]121S[Now -Fifth]
+[68]G[next]75S[If < 0 ]
+[69]S[1]123S[ Now - Fifth -1]
+[70]E[next]75S[If >= 0]
+[71]T0S[clear]
+[72]A[1]123S[+1]
+[73]A[Time now]S
+[74]T[Times Now]116S[times+1]
+[75]T0S[clear]
+[76]A[Times Now]116S[Get times]
+[77]S[TImeMax]114S[Times Now - Times Max]
+[78]G[skip]84S[if times Now < times max]
+[79]T0S
+[80]A[Time now]116S
+[81]T[Time Max]114S
+[82]A[Type Now]115S
+[83]T[TYPE Max]113S
+[84]T0S
+[85]T[time now]116S
+[86]A[SIZE]122S
+[87]S[1]123S[SIZE - 1]
+[88]U[SIZE]122S
+[89]S[4]126S[SIZE - 4]
+[90]G[SKIP]95S[IF SIZE < 4]
+[91]T0S
+[92]A[ELEMENT2]118S
+[93]T[TYPE Now]115S
+[94]E45S
+[95]T0S
+[96]A[SIZE]122S
+[97]S[3]125S
+[98]G[SKIP]103S[IF SIZE < 3]
+[99]T0S
+[100]A[ELEMENT 3]119S
+[101]T[TYPE Now]115S
+[102]E55S
+[103]T0S
+[104]A[SIZE]122S
+[105]S[2]124S
+[106]G[SKIP]111S[IF SIZE < 2]
+[107]T0S
+[108]A[ELEMENT 4]120S
+[109]T[TYPE Now]115S
+[110]E65S
+[111]T0S
+[112]X0S
+[113]P0S[TYPE MAX]
+[114]P0S[TIME MAX]
+[115]P0S[TYPE NOW]
+[116]P0S[TIME NOW]
+[117]P3L[1 ELE 7]
+[118]P2L[2 ELE 5]
+[119]P3L[3 ELE 7]
+[120]P1S[4 ELE 2]
+[121]P4S[5 ELE 8]
+[122]P2L[SIZE-5]
+[123]P0L[1]
+[124]P1S[2]
+[125]P1L[3]
+[126]P2S[4]    

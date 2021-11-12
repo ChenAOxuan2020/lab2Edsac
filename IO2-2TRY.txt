@@ -1,0 +1,165 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+T 56 K
+GK[директива IO2, фиксация начального адреса подпрограммы]
+[0]A3F
+[1]T81@[пролог: запись инструкции возврата]
+[2]A[FirstElement]5F[GET1 ELEMENT]
+[3]T[TYPE NOW]1F[PUT INTO PLACE]
+[4]A[TYPE NOW]12F[Get Type Elemrnt]
+[5]S[SecondElement]6F[Now - Sec]
+[6]G[next]13@[If < 0 ]
+[7]S[1]81@[ Now - Sec -1]
+[8]E[next]13@[If >= 0]
+[9]T0F[clear]
+[10]A[1]81@[+1]
+[11]A[Time now]10F
+[12]T[Times Now]10F[times+1]
+[13]T0F[clear]
+[14]A[TYPE NOW]12F[Get Type Elemrnt]
+[15]S[ThirdElement]7F[Now -Third]
+[16]G[NEXT]23@[If < 0 ]
+[17]S[1]81@[ Now - Third -1]
+[18]E[next]23@[If >= 0]
+[19]T0F[clear]
+[20]A[1]81@[+1]
+[21]A[Time now]10F
+[22]T[Times Now]10F[times+1]
+[23]T0F[clear]
+[24]A[TYPE NOW]12F[Get Type Elemrnt]
+[25]S[FourthElement]8F[Now -Fourth]
+[26]G[next]33@[If < 0 ]
+[27]S[1]81@[ Now - Fourth -1]
+[28]E[next]33@[If >= 0]
+[29]T0F[clear]
+[30]A[1]81@[+1]
+[31]A[Time now]10F
+[32]T[Times Now]10F[times+1]
+[33]T0F[clear]
+[34]A[Type Now]12F[Get Type Elemrnt]
+[35]S[FifthElement]9F[Now -Fifth]
+[36]G[next]43@[If < 0 ]
+[37]S[1]81@[ Now - Fifth -1]
+[38]E[next]43@[If >= 0]
+[39]T0S[clear]
+[40]A[1]81@[+1]
+[41]A[Time now]10F
+[42]T[Times Now]10F[times+1]
+[43]T0S[clear]
+[44]A[Times Now]10F[Get times]
+[45]S[TImeMax]11F[Times Now - Times Max]
+[46]G[skip]52@[if times Now < times max]
+[47]T0S
+[48]A[Time now]10F
+[49]T[Time Max]11F
+[50]A[Type Now]12F
+[51]T[TYPE Max]1F
+[52]T0S
+[53]T310F
+[54]A[SIZE]3F
+[55]S[1]81@[SIZE - 1]
+[56]U[SIZE]3F
+[57]S[4]84@[SIZE - 4]
+[58]G[SKIP]63@[IF SIZE < 4]
+[59]T0S
+[60]A[ELEMENT2]5F
+[61]T[TYPE Now]12F
+[62]E33@
+[63]T0S
+[64]A[SIZE]4F
+[65]S[3]83@
+[66]G[SKIP]71@[IF SIZE < 3]
+[67]T0S
+[68]A[ELEMENT 3]6F
+[69]T[TYPE Now]12F
+[70]E43@
+[71]T0F
+[72]A[SIZE]3F
+[73]S[2]81@
+[74]G[SKIP]79@[IF SIZE < 2]
+[75]T0F
+[76]A[ELEMENT 4]8F
+[77]T[TYPE Now]12F
+[78]E53@
+[79]T0F
+[80]E 0 F[эпилог: инструкция возврата из подпрограммы]
+[81] P0D[1]
+[82] P1F[2]
+[83] P1D[3]
+[84] P2F[4]
+GK[директива IO2, фиксация начального адреса программы]
+[0]X 0 F
+[1]A17@[SIZE]
+[2]T4F
+[3]A18@[X1-5]
+[4]T5F
+[5]A19@[X2-6]
+[6]T6F
+[7]A20@[X3-7]
+[8]T7F
+[9]A21@[X4-8]
+[10]T8F
+[11]A22@[X5-9]
+[12]T9F
+[13]A 13 @
+[14]G 56 F
+[15]Z 0 F
+[16]T0F
+[17]P2D[SIZE-5]
+[18]P2D[1 ELE 5]
+[19]P1F[2 ELE 2]
+[20]P2D[3 ELE 5]
+[21]P2F[4 ELE 4]
+[22]P2D[5 ELE 5]
+EZ PF
